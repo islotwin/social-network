@@ -5,9 +5,10 @@
 
 ## file structure (check test{i}.txt):
 ```
-start node id
-end node id
 from to
 from to
 (...)
 ```
+
+## example data sources
+* https://snap.stanford.edu/data/bigdata/communities/com-lj.ungraph.txt.gz

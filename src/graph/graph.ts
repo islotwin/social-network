@@ -1,4 +1,3 @@
-import Edge from './edge';
 import Node from './node';
 
 const START = 0;
@@ -7,7 +6,6 @@ const OFFSET = 2;
 
 export default class Graph {
   nodes: {[key: string]: Node} = {};
-  edges: Edge[] = [];
   start: string = null;
   target: string = null;
 
@@ -32,42 +30,32 @@ export default class Graph {
 
   setTarget (target) {
     this.target = target;
-    this.nodes[target] = this.nodes[target] || new Node([], [], target);
+    this.nodes[target] = this.nodes[target] || new Node(target);
   }
 
   setStart (start) {
     this.start = start;
-    this.nodes[start] = this.nodes[start] || new Node([], [], start);
+    this.nodes[start] = this.nodes[start] || new Node(start);
   }
 
-  addEdge (from, to) {
-    const edge = new Edge(from, to);
-    this.edges.push(edge);
+  addEdge (from: string, to: string) {
+    if (!this.nodes[from]) {
+      this.nodes[from] = new Node(from);
+    }
+    this.nodes[from]?.addNeighbour(to);
 
-    if (this.nodes[from]) {
-      this.nodes[from].output.push(edge);
-    } else {
-      this.nodes[from] = new Node([], [edge], from);
-    };
-
-    if (this.nodes[to]) {
-      this.nodes[to].input.push(edge);
-    } else {
-      this.nodes[to] = new Node([edge], [], to);
-    };
+    if (!this.nodes[to]) {
+      this.nodes[to] = new Node(to);
+    }
+    this.nodes[to].addNeighbour(from);
   }
 
   getNodesArray () {
-    return Object.keys(this.nodes)
-      .map(id => this.nodes[id]);
+    return Object.values(this.nodes);
   }
 
   getNodesMap () {
     return this.nodes;
-  }
-
-  getEdges () {
-    return this.edges;
   }
 
   getStartNode () {

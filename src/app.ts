@@ -1,7 +1,8 @@
 import fs from 'fs';
 import readline from 'readline';
-import { findLowestCostPathBF, DeepFirstSearch } from './bf';
 import Graph from './graph/graph';
+import { DeepFirstSearch } from './algorithm/dfs';
+import { BreadthFirstSearch } from './algorithm/bfs';
 
 const filePath = process.argv[2];
 
@@ -28,13 +29,21 @@ rl.on('close', () => {
     process.exit(1);
   }
 
-  const timeElapsed = MakeNStimeElapsed();
+  let timeElapsed = MakeNStimeElapsed();
   const rawGraph = Graph.parse(lines);
-  const bfPath = findLowestCostPathBF(rawGraph);
-  const [_timeS, _timeNS] = timeElapsed();
-  console.log('BF: ', bfPath.nodes.join(','), `\n time: ${_timeS}s, ${_timeNS}ns\n`);
-  const dfPath = new DeepFirstSearch(rawGraph);
-  console.log('DF: ', dfPath.getShortestPath()?.nodes.join(','));
+  const dfs = new DeepFirstSearch(rawGraph);
+  const path = dfs.findShortestPath();
+  let [_timeS, _timeNS] = timeElapsed();
+  console.log('DF: ', path?.nodes.join(','), `\n time: ${_timeS}s, ${_timeNS}ns\n`);
+  const bfs = new BreadthFirstSearch(rawGraph);
+  timeElapsed = MakeNStimeElapsed();
+  let connected = bfs.areNodesConnected('1', '30');
+  [_timeS, _timeNS] = timeElapsed();
+  console.log('BFS-1: ', connected, `\n time: ${_timeS}s, ${_timeNS}ns\n`);
+  timeElapsed = MakeNStimeElapsed();
+  connected = bfs.areNodesConnected('1', '32');
+  [_timeS, _timeNS] = timeElapsed();
+  console.log('BFS-2: ', connected, `\n time: ${_timeS}s, ${_timeNS}ns\n`);
 });
 
 const MakeNStimeElapsed = () => {

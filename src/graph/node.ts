@@ -1,13 +1,18 @@
-import Edge from './edge';
-
 export default class Node {
-  input: Edge[];
-  output: Edge[];
+  neighbours: Set<string>;
   id: string;
+  component?: string;
 
-  constructor (input: Edge[] = [], output: Edge[] = [], id: string) {
-    this.input = input;
-    this.output = output;
+  constructor (id: string, neighbours?: string[] | Set<string>) {
     this.id = id;
+    this.neighbours = new Set(neighbours);
+  }
+
+  addNeighbour (id:string) {
+    this.neighbours.add(id);
+  }
+
+  addComponent (id: string) {
+    this.component = id;
   }
 }

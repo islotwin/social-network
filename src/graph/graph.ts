@@ -1,5 +1,5 @@
 import Node from './node';
-import {tickLogger} from '../tickLogger';
+import { tickLogger } from '../tickLogger';
 
 export default class Graph {
   private nodes: {[key: string]: Node} = {};
@@ -10,7 +10,7 @@ export default class Graph {
     const logger = tickLogger({
       total: lines.length,
       tag: 'Parser',
-      logCount: 1000
+      logCount: 100
     });
 
     lines.forEach(([from, to], index) => {

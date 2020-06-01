@@ -15,7 +15,7 @@ export class BreadthFirstSearch {
       this.crawl();
     }
     const components = this.graph.getNodesArray().reduce((acc, { component }) => acc.add(component), new Set());
-    console.log(this.graph.getNodesArray().length, start, this.graph.getNode(start).component, target, this.graph.getNode(target).component, components);
+    console.log(this.graph.getNodesArray().length, start, this.graph.getNode(start).component, target, this.graph.getNode(target).component, components.size);
     return this.graph.getNode(start).component === this.graph.getNode(target).component;
   }
 
@@ -25,19 +25,20 @@ export class BreadthFirstSearch {
     const toVisit = new Set<string>(nodes);
     const toVisitIterator = toVisit.values();
     const visited = new Set<string>([start]);
-    const queue = [start];
+    const queue = new Queue(nodes.length);
+    queue.push(start);
     let component = start;
     const logger = tickLogger({
       total: nodes.length,
       tag: 'BFS',
-      logCount: 1000
+      logCount: 100
     });
 
-    while (queue.length || toVisit.size) {
-      logger();
+    while (!queue.isEmpty() || toVisit.size) {
+      logger(`Queue length: ${queue.length}`);
       let nodeId: string;
-      if (queue.length) {
-        nodeId = queue.splice(0, 1)[0];
+      if (!queue.isEmpty()) {
+        nodeId = queue.pop();
       } else {
         nodeId = toVisitIterator.next().value;
         component = nodeId;
@@ -53,5 +54,42 @@ export class BreadthFirstSearch {
       });
     }
     this.crawled = true;
+  }
+}
+
+class Queue {
+  array: string[];
+  firstIndex: number;
+  lastIndex: number;
+
+  constructor (length) {
+    this.array = new Array(length);
+    this.firstIndex = 0;
+    this.lastIndex = -1;
+  }
+
+  push (id: string) {
+    if (this.lastIndex + 1 === this.array.length) {
+      throw new Error('Queue is full.');
+    }
+    this.lastIndex += 1;
+    this.array[this.lastIndex] = id;
+  }
+
+  pop () {
+    if (this.isEmpty()) {
+      throw new Error('Queue is empty.');
+    }
+    const first = this.array[this.firstIndex];
+    this.firstIndex += 1;
+    return first;
+  }
+
+  isEmpty () {
+    return this.firstIndex > this.lastIndex;
+  }
+
+  get length () {
+    return this.lastIndex - this.firstIndex + 1;
   }
 }

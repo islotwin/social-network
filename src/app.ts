@@ -7,7 +7,9 @@ import timeFunction from './timer';
 
 const filePath = process.argv[2];
 
-if (!filePath) { console.error('Usage: node index.js [filePath]'); };
+if (!filePath) {
+  console.error('Usage: node index.js [filePath]');
+};
 
 if (!fs.existsSync(filePath)) {
   console.error(`file ${filePath} does not exist, exiting program...`);
@@ -37,9 +39,9 @@ rl.on('close', async () => {
   const rawGraph = Graph.parse(lines);
   console.log('Created graph...');
   const bfs = new BreadthFirstSearch(rawGraph);
-  await timeFunction(() => bfs.areNodesConnected('1', '200'), 'BFS-1');
-  await timeFunction(() => bfs.areNodesConnected('1', '300'), 'BFS-2');
-  await timeFunction(() => bfs.areNodesConnected('1', '1000'), 'BFS-3');
+  await timeFunction(() => bfs.areNodesConnected('1', '2'), 'BFS-1');
+  await timeFunction(() => bfs.areNodesConnected('1', '3'), 'BFS-2');
+  await timeFunction(() => bfs.areNodesConnected('1', '5'), 'BFS-3');
   // const dijkstra = new Dijkstra(rawGraph);
   // await timeFunction(() => {
   //   const path = dijkstra.findShortestPath('HR-0', 'HR-23855');

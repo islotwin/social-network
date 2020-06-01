@@ -14,12 +14,12 @@ export class BreadthFirstSearch {
       this.crawl();
     }
     const components = this.graph.getNodesArray().reduce((acc, { component }) => acc.add(component), new Set());
-    console.log(this.graph.getNodesArray().length, start, this.graph.nodes[start].component, target, this.graph.nodes[target].component, components);
-    return this.graph.nodes[start].component === this.graph.nodes[target].component;
+    // console.log(this.graph.getNodesArray().length, start, this.graph.getNode(start).component, target, this.graph.getNode(target).component, components);
+    return this.graph.getNode(start).component === this.graph.getNode(target).component;
   }
 
   private crawl () {
-    const nodes = Object.keys(this.graph.nodes);
+    const nodes = Object.keys(this.graph.getNodes());
     const start = nodes[0];
     const toVisit = new Set<string>(nodes);
     const toVisitIterator = toVisit.values();
@@ -34,8 +34,7 @@ export class BreadthFirstSearch {
         nodeId = toVisitIterator.next().value;
         component = nodeId;
       }
-      // console.log('----- BFS -----', nodeId);
-      const node = this.graph.nodes[nodeId];
+      const node = this.graph.getNode(nodeId);
       node.addComponent(component);
       toVisit.delete(nodeId);
       node.neighbours.forEach((neighbour) => {

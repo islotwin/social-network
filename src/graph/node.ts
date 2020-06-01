@@ -2,6 +2,8 @@ export default class Node {
   neighbours: Set<string>;
   id: string;
   component?: string;
+  distance?: number;
+  from?: Node;
 
   constructor (id: string, neighbours?: string[] | Set<string>) {
     this.id = id;

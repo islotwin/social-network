@@ -1,8 +1,9 @@
 import fs from 'fs';
 import readline from 'readline';
 import Graph from './graph/graph';
-import { DeepFirstSearch } from './algorithm/dfs';
+import { Dijkstra } from './algorithm/dijkstra';
 import { BreadthFirstSearch } from './algorithm/bfs';
+import timeFunction from './timer';
 
 const filePath = process.argv[2];
 
@@ -23,31 +24,20 @@ rl.on('line', line => {
   lines.push(line.trim().split(' '));
 });
 
-rl.on('close', () => {
+rl.on('close', async () => {
   if (lines.length < 1) {
     console.error('Incorrect input file, exiting...');
     process.exit(1);
   }
 
-  let timeElapsed = MakeNStimeElapsed();
   const rawGraph = Graph.parse(lines);
   console.log('Created graph...');
-  // const dfs = new DeepFirstSearch(rawGraph);
-  // const path = dfs.findShortestPath();
-  // let [_timeS, _timeNS] = timeElapsed();
-  // console.log('DF: ', path?.nodes.join(','), `\n time: ${_timeS}s, ${_timeNS}ns\n`);
   const bfs = new BreadthFirstSearch(rawGraph);
-  timeElapsed = MakeNStimeElapsed();
-  let connected = bfs.areNodesConnected('HR-16141', 'HR-3591');
-  let [_timeS, _timeNS] = timeElapsed();
-  console.log('BFS-1: ', connected, `\n time: ${_timeS}s, ${_timeNS}ns\n`);
-  timeElapsed = MakeNStimeElapsed();
-  connected = bfs.areNodesConnected('HU-15046', 'RO-28037');
-  [_timeS, _timeNS] = timeElapsed();
-  console.log('BFS-2: ', connected, `\n time: ${_timeS}s, ${_timeNS}ns\n`);
+  await timeFunction(() => bfs.areNodesConnected('HR-0', 'HR-23855'), 'BFS-1');
+  await timeFunction(() => bfs.areNodesConnected('HR-0', 'HU-0'), 'BFS-2');
+  const dijkstra = new Dijkstra(rawGraph);
+  await timeFunction(() => {
+    const path = dijkstra.findShortestPath('HR-0', 'HR-23855');
+    return path?.join(',') || null;
+  }, 'DIJKSTRA');
 });
-
-const MakeNStimeElapsed = () => {
-  const start = process.hrtime();
-  return () => process.hrtime(start);
-};

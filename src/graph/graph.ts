@@ -1,7 +1,7 @@
 import Node from './node';
 
 export default class Graph {
-  nodes: {[key: string]: Node} = {};
+  private nodes: {[key: string]: Node} = {};
 
   static parse (lines: [string, string][]) {
     const graph = new Graph();
@@ -33,7 +33,15 @@ export default class Graph {
     return Object.values(this.nodes);
   }
 
-  getNodesMap () {
+  getNodes () {
     return this.nodes;
+  }
+
+  getNode (id: string) {
+    const node = this.nodes[id];
+    if (!node) {
+      throw new Error(`Node ${id} doesn't exist.`);
+    }
+    return node;
   }
 }

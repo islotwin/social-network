@@ -14,6 +14,7 @@ if (!fs.existsSync(filePath)) {
   process.exit(1);
 }
 
+console.log('Running...');
 const rl = readline.createInterface({
   input: fs.createReadStream(filePath)
 });
@@ -21,10 +22,13 @@ const rl = readline.createInterface({
 const lines = [];
 
 rl.on('line', line => {
-  lines.push(line.trim().split(' '));
+  if (line.trim()) {
+    lines.push(line.trim().split(/\s/));
+  }
 });
 
 rl.on('close', async () => {
+  console.log('Creating graph...');
   if (lines.length < 1) {
     console.error('Incorrect input file, exiting...');
     process.exit(1);
@@ -33,11 +37,12 @@ rl.on('close', async () => {
   const rawGraph = Graph.parse(lines);
   console.log('Created graph...');
   const bfs = new BreadthFirstSearch(rawGraph);
-  await timeFunction(() => bfs.areNodesConnected('HR-0', 'HR-23855'), 'BFS-1');
-  await timeFunction(() => bfs.areNodesConnected('HR-0', 'HU-0'), 'BFS-2');
-  const dijkstra = new Dijkstra(rawGraph);
-  await timeFunction(() => {
-    const path = dijkstra.findShortestPath('HR-0', 'HR-23855');
-    return path?.join(',') || null;
-  }, 'DIJKSTRA');
+  await timeFunction(() => bfs.areNodesConnected('1', '200'), 'BFS-1');
+  await timeFunction(() => bfs.areNodesConnected('1', '300'), 'BFS-2');
+  await timeFunction(() => bfs.areNodesConnected('1', '1000'), 'BFS-3');
+  // const dijkstra = new Dijkstra(rawGraph);
+  // await timeFunction(() => {
+  //   const path = dijkstra.findShortestPath('HR-0', 'HR-23855');
+  //   return path?.join(',') || null;
+  // }, 'DIJKSTRA');
 });

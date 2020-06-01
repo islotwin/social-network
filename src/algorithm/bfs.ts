@@ -14,7 +14,7 @@ export class BreadthFirstSearch {
       this.crawl();
     }
     const components = this.graph.getNodesArray().reduce((acc, { component }) => acc.add(component), new Set());
-    // console.log(this.graph.getNodesArray().length, start, this.graph.getNode(start).component, target, this.graph.getNode(target).component, components);
+    console.log(this.graph.getNodesArray().length, start, this.graph.getNode(start).component, target, this.graph.getNode(target).component, components);
     return this.graph.getNode(start).component === this.graph.getNode(target).component;
   }
 

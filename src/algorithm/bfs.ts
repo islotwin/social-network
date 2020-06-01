@@ -1,4 +1,5 @@
 import Graph from '../graph/graph';
+import { tickLogger } from '../tickLogger';
 
 export class BreadthFirstSearch {
   private graph: Graph;
@@ -26,7 +27,14 @@ export class BreadthFirstSearch {
     const visited = new Set<string>([start]);
     const queue = [start];
     let component = start;
+    const logger = tickLogger({
+      total: nodes.length,
+      tag: 'BFS',
+      logCount: 1000
+    });
+
     while (queue.length || toVisit.size) {
+      logger();
       let nodeId: string;
       if (queue.length) {
         nodeId = queue.splice(0, 1)[0];

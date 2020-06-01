@@ -1,4 +1,5 @@
 import Node from './node';
+import {tickLogger} from '../tickLogger';
 
 export default class Graph {
   private nodes: {[key: string]: Node} = {};
@@ -6,12 +7,20 @@ export default class Graph {
   static parse (lines: [string, string][]) {
     const graph = new Graph();
 
+    const logger = tickLogger({
+      total: lines.length,
+      tag: 'Parser',
+      logCount: 1000
+    });
+
     lines.forEach(([from, to], index) => {
       if (!from || !to) {
         console.error(`Error while parsing data file line ${index}, exiting...`);
         process.exit(1);
       }
       graph.addEdge(from, to);
+
+      logger();
     });
 
     return graph;

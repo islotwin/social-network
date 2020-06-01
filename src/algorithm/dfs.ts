@@ -8,23 +8,21 @@ type Path = {
 
 export class DeepFirstSearch {
   private graph: Graph;
-  private startNode: Node;
-  private targetNode: Node;
   private shortestPath: Path | null;
+  private target: string
 
   constructor (graph: Graph) {
     this.graph = graph;
-    this.startNode = graph.nodes[graph.start];
-    this.targetNode = graph.nodes[graph.target];
     this.shortestPath = null;
   }
 
-  public findShortestPath (startNode: Node = this.startNode) {
-    return this._findShortestPath({ node: startNode, path: { cost: 0, nodes: [startNode.id] } });
+  public findShortestPath (start: string, target: string) {
+    this.target = target;
+    return this._findShortestPath({ node: this.graph[start], path: { cost: 0, nodes: [start] } });
   }
 
   private _findShortestPath ({ node, path }: {node: Node, path: Path }): Path | null {
-    if (node.id === this.targetNode.id) {
+    if (node.id === this.target) {
       if (this.shortestPath === null || this.shortestPath.cost > path.cost) {
         this.shortestPath = path;
       }
@@ -42,6 +40,7 @@ export class DeepFirstSearch {
           }
         });
       });
+    this.target = null;
     return this.shortestPath;
   }
 }

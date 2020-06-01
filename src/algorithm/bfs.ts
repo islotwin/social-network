@@ -1,28 +1,27 @@
 import Graph from '../graph/graph';
-import Node from '../graph/node';
 
 export class BreadthFirstSearch {
   private graph: Graph;
-  private startNode: Node;
-  private targetNode: Node;
   private crawled: boolean;
 
   constructor (graph: Graph) {
     this.graph = graph;
-    this.startNode = graph.nodes[graph.start];
-    this.targetNode = graph.nodes[graph.target];
     this.crawled = false;
   }
 
-  public areNodesConnected (start: string = this.startNode.id, target: string = this.targetNode.id) {
+  public areNodesConnected (start: string, target: string) {
     if (!this.crawled) {
-      this.crawl(start);
+      this.crawl();
     }
+    const components = this.graph.getNodesArray().reduce((acc, { component }) => acc.add(component), new Set());
+    console.log(this.graph.getNodesArray().length, start, this.graph.nodes[start].component, target, this.graph.nodes[target].component, components);
     return this.graph.nodes[start].component === this.graph.nodes[target].component;
   }
 
-  private crawl (start: string = this.startNode.id) {
-    const toVisit = new Set<string>(Object.keys(this.graph.nodes));
+  private crawl () {
+    const nodes = Object.keys(this.graph.nodes);
+    const start = nodes[0];
+    const toVisit = new Set<string>(nodes);
     const toVisitIterator = toVisit.values();
     const visited = new Set<string>([start]);
     const queue = [start];

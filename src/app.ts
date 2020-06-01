@@ -24,24 +24,25 @@ rl.on('line', line => {
 });
 
 rl.on('close', () => {
-  if (lines.length < 3) {
+  if (lines.length < 1) {
     console.error('Incorrect input file, exiting...');
     process.exit(1);
   }
 
   let timeElapsed = MakeNStimeElapsed();
   const rawGraph = Graph.parse(lines);
-  const dfs = new DeepFirstSearch(rawGraph);
-  const path = dfs.findShortestPath();
-  let [_timeS, _timeNS] = timeElapsed();
-  console.log('DF: ', path?.nodes.join(','), `\n time: ${_timeS}s, ${_timeNS}ns\n`);
+  console.log('Created graph...');
+  // const dfs = new DeepFirstSearch(rawGraph);
+  // const path = dfs.findShortestPath();
+  // let [_timeS, _timeNS] = timeElapsed();
+  // console.log('DF: ', path?.nodes.join(','), `\n time: ${_timeS}s, ${_timeNS}ns\n`);
   const bfs = new BreadthFirstSearch(rawGraph);
   timeElapsed = MakeNStimeElapsed();
-  let connected = bfs.areNodesConnected('1', '30');
-  [_timeS, _timeNS] = timeElapsed();
+  let connected = bfs.areNodesConnected('HR-16141', 'HR-3591');
+  let [_timeS, _timeNS] = timeElapsed();
   console.log('BFS-1: ', connected, `\n time: ${_timeS}s, ${_timeNS}ns\n`);
   timeElapsed = MakeNStimeElapsed();
-  connected = bfs.areNodesConnected('1', '32');
+  connected = bfs.areNodesConnected('HU-15046', 'RO-28037');
   [_timeS, _timeNS] = timeElapsed();
   console.log('BFS-2: ', connected, `\n time: ${_timeS}s, ${_timeNS}ns\n`);
 });

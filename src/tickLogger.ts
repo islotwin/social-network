@@ -29,16 +29,16 @@ export const tickLogger = ({ total, tag, logCount = 1000 }: TickLoggerParams) =>
 
   const tick = createTick();
 
-  return () => {
+  return (comment = '') => {
     if (ticksUntilLog === 0) {
-      console.log(`[TICK] (${tag})`, (new Date()).toLocaleTimeString(), percentString(current / total));
+      console.log(`[TICK] (${tag})`, (new Date()).toLocaleTimeString(), percentString(current / total), comment);
       ticksUntilLog = logInterval;
     } else {
       ticksUntilLog--;
     }
     current++;
     if (current === total) {
-      console.log(`[TICK] (${tag})`, `Finished in ${tick.tock()}`);
+      console.log(`[TICK] (${tag})`, `Finished in ${tick.tock()}`, comment);
     }
   };
 };

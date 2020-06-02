@@ -4,7 +4,9 @@
   "description": "Project for examining whether two people have common friends",
   "main": "dist/app.js",
   "scripts": {
-    "start": "npx tsc && node --max-old-space-size=8192 dist/app.js \"./tests/test1.txt\""
+    "start": "npx tsc && node dist/app.js \"./tests/test1.txt\"",
+    "test": "npx tsc && node --max-old-space-size=8192 dist/app.js",
+    "test-large": "npx tsc && node --max-old-space-size=14192 dist/app.js"
   },
   "license": "MIT",
   "dependencies": {},

@@ -1,9 +1,22 @@
 # Social Network
-## required node.js [(download)](https://nodejs.org/en/) with yarn [(download)](https://yarnpkg.com/getting-started/install)
-* yarn
-* yarn start
+## required tools
+* node.js [(download)](https://nodejs.org/en/),
+* yarn [(download)](https://yarnpkg.com/getting-started/install)
+* npx [(download)](https://www.npmjs.com/package/npx)
 
-## file structure (check test{i}.txt):
+## run tests
+#### install packages and run first test
+```
+yarn
+yarn run test [path/to/file.txt]
+```
+#### example
+```
+yarn run test ./tests/test1.txt
+```
+
+## file structure (check tests/test{i}.txt):
+Each line in file represents an undirected edge in graph, where `from` and `to` are nodes.
 ```
 from to
 from to

@@ -1,0 +1,231 @@
+# 13.8GB RAM
+yarn run v1.22.4
+$ npx tsc && node --max-old-space-size=14192 dist/app.js "./tests/other/orkut.txt"
+
+Running...
+Creating graph...
+[TICK] (Parser) 12:11:30 0.00% 
+[TICK] (Parser) 12:11:32 1.00% 
+[TICK] (Parser) 12:11:34 2.00% 
+[TICK] (Parser) 12:11:36 3.00% 
+[TICK] (Parser) 12:11:38 4.00% 
+[TICK] (Parser) 12:11:40 5.00% 
+[TICK] (Parser) 12:11:42 6.00% 
+[TICK] (Parser) 12:11:45 7.00% 
+[TICK] (Parser) 12:11:47 8.00% 
+[TICK] (Parser) 12:11:49 9.00% 
+[TICK] (Parser) 12:11:52 10.00% 
+[TICK] (Parser) 12:11:54 11.00% 
+[TICK] (Parser) 12:11:56 12.00% 
+[TICK] (Parser) 12:11:59 13.00% 
+[TICK] (Parser) 12:12:02 14.00% 
+[TICK] (Parser) 12:12:05 15.00% 
+[TICK] (Parser) 12:12:10 16.00% 
+[TICK] (Parser) 12:12:13 17.00% 
+[TICK] (Parser) 12:12:16 18.00% 
+[TICK] (Parser) 12:12:19 19.00% 
+[TICK] (Parser) 12:12:22 20.00% 
+[TICK] (Parser) 12:12:26 21.00% 
+[TICK] (Parser) 12:12:29 22.00% 
+[TICK] (Parser) 12:12:33 23.00% 
+[TICK] (Parser) 12:12:36 24.00% 
+[TICK] (Parser) 12:12:39 25.00% 
+[TICK] (Parser) 12:12:43 26.00% 
+[TICK] (Parser) 12:12:46 27.00% 
+[TICK] (Parser) 12:12:50 28.00% 
+[TICK] (Parser) 12:12:53 29.00% 
+[TICK] (Parser) 12:12:57 30.00% 
+[TICK] (Parser) 12:13:01 31.00% 
+[TICK] (Parser) 12:13:05 32.00% 
+[TICK] (Parser) 12:13:08 33.00% 
+[TICK] (Parser) 12:13:11 34.00% 
+[TICK] (Parser) 12:13:15 35.00% 
+[TICK] (Parser) 12:13:19 36.00% 
+[TICK] (Parser) 12:13:22 37.00% 
+[TICK] (Parser) 12:13:26 38.00% 
+[TICK] (Parser) 12:13:30 39.00% 
+[TICK] (Parser) 12:13:34 40.00% 
+[TICK] (Parser) 12:13:38 41.00% 
+[TICK] (Parser) 12:13:42 42.00% 
+[TICK] (Parser) 12:13:46 43.00% 
+[TICK] (Parser) 12:13:50 44.00% 
+[TICK] (Parser) 12:13:54 45.00% 
+[TICK] (Parser) 12:14:08 46.00% 
+[TICK] (Parser) 12:14:12 47.00% 
+[TICK] (Parser) 12:14:16 48.00% 
+[TICK] (Parser) 12:14:29 49.00% 
+[TICK] (Parser) 12:14:33 50.00% 
+[TICK] (Parser) 12:14:37 51.00% 
+[TICK] (Parser) 12:14:41 52.00% 
+[TICK] (Parser) 12:14:45 53.00% 
+[TICK] (Parser) 12:14:49 54.00% 
+[TICK] (Parser) 12:14:53 55.00% 
+[TICK] (Parser) 12:14:58 56.00% 
+[TICK] (Parser) 12:15:02 57.00% 
+[TICK] (Parser) 12:15:06 58.00% 
+[TICK] (Parser) 12:15:10 59.00% 
+[TICK] (Parser) 12:15:15 60.00% 
+[TICK] (Parser) 12:15:34 61.00% 
+[TICK] (Parser) 12:15:39 62.00% 
+[TICK] (Parser) 12:15:43 63.00% 
+[TICK] (Parser) 12:15:48 64.00% 
+[TICK] (Parser) 12:15:53 65.00% 
+[TICK] (Parser) 12:15:57 66.00% 
+[TICK] (Parser) 12:16:02 67.00% 
+[TICK] (Parser) 12:16:07 68.00% 
+[TICK] (Parser) 12:16:12 69.00% 
+[TICK] (Parser) 12:16:17 70.00% 
+[TICK] (Parser) 12:16:21 71.00% 
+[TICK] (Parser) 12:16:26 72.00% 
+[TICK] (Parser) 12:16:31 73.00% 
+[TICK] (Parser) 12:16:36 74.00% 
+[TICK] (Parser) 12:16:41 75.00% 
+[TICK] (Parser) 12:17:22 76.00% 
+[TICK] (Parser) 12:17:36 77.00% 
+[TICK] (Parser) 12:17:44 78.00% 
+[TICK] (Parser) 12:17:51 79.00% 
+[TICK] (Parser) 12:17:57 80.00% 
+[TICK] (Parser) 12:18:03 81.00% 
+[TICK] (Parser) 12:18:09 82.00% 
+[TICK] (Parser) 12:18:15 83.00% 
+[TICK] (Parser) 12:18:21 84.00% 
+[TICK] (Parser) 12:18:27 85.00% 
+[TICK] (Parser) 12:18:34 86.00% 
+[TICK] (Parser) 12:18:40 87.00% 
+[TICK] (Parser) 12:18:47 88.00% 
+[TICK] (Parser) 12:19:18 89.00% 
+[TICK] (Parser) 12:20:10 90.00% 
+[TICK] (Parser) 12:20:23 91.00% 
+[TICK] (Parser) 12:20:34 92.00% 
+[TICK] (Parser) 12:20:44 93.00% 
+[TICK] (Parser) 12:20:54 94.00% 
+[TICK] (Parser) 12:21:09 95.00% 
+[TICK] (Parser) 12:22:52 96.00% 
+[TICK] (Parser) 12:24:41 97.00% 
+[TICK] (Parser) 12:25:02 98.00% 
+[TICK] (Parser) 12:25:13 99.00% 
+[TICK] (Parser) Finished in 832.981524212s 
+Created graph...
+[TICK] (BFS) 12:25:25 0.00% Queue length: 1
+[TICK] (BFS) 12:25:29 1.00% Queue length: 851124
+[TICK] (BFS) 12:25:35 2.00% Queue length: 2111819
+[TICK] (BFS) 12:25:39 3.00% Queue length: 2272241
+[TICK] (BFS) 12:25:42 4.00% Queue length: 2354958
+[TICK] (BFS) 12:25:45 5.00% Queue length: 2401102
+[TICK] (BFS) 12:25:49 6.00% Queue length: 2494599
+[TICK] (BFS) 12:25:53 7.00% Queue length: 2504349
+[TICK] (BFS) 12:25:56 8.00% Queue length: 2510026
+[TICK] (BFS) 12:25:58 9.00% Queue length: 2511588
+[TICK] (BFS) 12:26:01 10.00% Queue length: 2506194
+[TICK] (BFS) 12:26:04 11.00% Queue length: 2501914
+[TICK] (BFS) 12:26:06 12.00% Queue length: 2489704
+[TICK] (BFS) 12:26:08 13.00% Queue length: 2471580
+[TICK] (BFS) 12:26:11 14.00% Queue length: 2453195
+[TICK] (BFS) 12:26:13 15.00% Queue length: 2434084
+[TICK] (BFS) 12:26:16 16.00% Queue length: 2414918
+[TICK] (BFS) 12:26:21 17.00% Queue length: 2416624
+[TICK] (BFS) 12:26:23 18.00% Queue length: 2393140
+[TICK] (BFS) 12:26:25 19.00% Queue length: 2367019
+[TICK] (BFS) 12:26:28 20.00% Queue length: 2356549
+[TICK] (BFS) 12:26:29 21.00% Queue length: 2359478
+[TICK] (BFS) 12:26:31 22.00% Queue length: 2344842
+[TICK] (BFS) 12:26:32 23.00% Queue length: 2320689
+[TICK] (BFS) 12:26:36 24.00% Queue length: 2302658
+[TICK] (BFS) 12:26:41 25.00% Queue length: 2275253
+[TICK] (BFS) 12:26:46 26.00% Queue length: 2251222
+[TICK] (BFS) 12:26:52 27.00% Queue length: 2224227
+[TICK] (BFS) 12:26:54 28.00% Queue length: 2194533
+[TICK] (BFS) 12:26:56 29.00% Queue length: 2164920
+[TICK] (BFS) 12:26:58 30.00% Queue length: 2134908
+[TICK] (BFS) 12:26:59 31.00% Queue length: 2104978
+[TICK] (BFS) 12:27:01 32.00% Queue length: 2075147
+[TICK] (BFS) 12:27:04 33.00% Queue length: 2045287
+[TICK] (BFS) 12:27:06 34.00% Queue length: 2015529
+[TICK] (BFS) 12:27:10 35.00% Queue length: 1985828
+[TICK] (BFS) 12:27:13 36.00% Queue length: 1955838
+[TICK] (BFS) 12:27:16 37.00% Queue length: 1925898
+[TICK] (BFS) 12:27:19 38.00% Queue length: 1896009
+[TICK] (BFS) 12:27:22 39.00% Queue length: 1865677
+[TICK] (BFS) 12:27:25 40.00% Queue length: 1835222
+[TICK] (BFS) 12:27:28 41.00% Queue length: 1804820
+[TICK] (BFS) 12:27:31 42.00% Queue length: 1774413
+[TICK] (BFS) 12:27:34 43.00% Queue length: 1743994
+[TICK] (BFS) 12:27:38 44.00% Queue length: 1713458
+[TICK] (BFS) 12:27:41 45.00% Queue length: 1682990
+[TICK] (BFS) 12:27:44 46.00% Queue length: 1652519
+[TICK] (BFS) 12:27:46 47.00% Queue length: 1621950
+[TICK] (BFS) 12:27:48 48.00% Queue length: 1591348
+[TICK] (BFS) 12:27:50 49.00% Queue length: 1560732
+[TICK] (BFS) 12:27:53 50.00% Queue length: 1530095
+[TICK] (BFS) 12:27:55 51.00% Queue length: 1499484
+[TICK] (BFS) 12:27:57 52.00% Queue length: 1468848
+[TICK] (BFS) 12:27:59 53.00% Queue length: 1438191
+[TICK] (BFS) 12:28:02 54.00% Queue length: 1407520
+[TICK] (BFS) 12:28:04 55.00% Queue length: 1376849
+[TICK] (BFS) 12:28:05 56.00% Queue length: 1346187
+[TICK] (BFS) 12:28:08 57.00% Queue length: 1315516
+[TICK] (BFS) 12:28:10 58.00% Queue length: 1284834
+[TICK] (BFS) 12:28:12 59.00% Queue length: 1254141
+[TICK] (BFS) 12:28:14 60.00% Queue length: 1223449
+[TICK] (BFS) 12:28:16 61.00% Queue length: 1192748
+[TICK] (BFS) 12:28:18 62.00% Queue length: 1162106
+[TICK] (BFS) 12:28:21 63.00% Queue length: 1131410
+[TICK] (BFS) 12:28:23 64.00% Queue length: 1100707
+[TICK] (BFS) 12:28:25 65.00% Queue length: 1070043
+[TICK] (BFS) 12:28:30 66.00% Queue length: 1039649
+[TICK] (BFS) 12:28:32 67.00% Queue length: 1009342
+[TICK] (BFS) 12:28:34 68.00% Queue length: 978956
+[TICK] (BFS) 12:28:37 69.00% Queue length: 948631
+[TICK] (BFS) 12:28:39 70.00% Queue length: 918177
+[TICK] (BFS) 12:28:41 71.00% Queue length: 887749
+[TICK] (BFS) 12:28:43 72.00% Queue length: 857405
+[TICK] (BFS) 12:28:45 73.00% Queue length: 826925
+[TICK] (BFS) 12:28:47 74.00% Queue length: 796624
+[TICK] (BFS) 12:28:49 75.00% Queue length: 766112
+[TICK] (BFS) 12:28:50 76.00% Queue length: 735752
+[TICK] (BFS) 12:28:52 77.00% Queue length: 705278
+[TICK] (BFS) 12:28:53 78.00% Queue length: 674696
+[TICK] (BFS) 12:28:55 79.00% Queue length: 644099
+[TICK] (BFS) 12:28:56 80.00% Queue length: 613512
+[TICK] (BFS) 12:28:58 81.00% Queue length: 582867
+[TICK] (BFS) 12:29:00 82.00% Queue length: 552212
+[TICK] (BFS) 12:29:40 83.00% Queue length: 521576
+[TICK] (BFS) 12:29:46 84.00% Queue length: 490895
+[TICK] (BFS) 12:29:51 85.00% Queue length: 460200
+[TICK] (BFS) 12:29:54 86.00% Queue length: 429523
+[TICK] (BFS) 12:29:57 87.00% Queue length: 398842
+[TICK] (BFS) 12:29:59 88.00% Queue length: 368186
+[TICK] (BFS) 12:30:00 89.00% Queue length: 337578
+[TICK] (BFS) 12:30:01 90.00% Queue length: 306907
+[TICK] (BFS) 12:30:02 91.00% Queue length: 276246
+[TICK] (BFS) 12:30:02 92.00% Queue length: 245565
+[TICK] (BFS) 12:30:03 93.00% Queue length: 214878
+[TICK] (BFS) 12:30:04 94.00% Queue length: 184201
+[TICK] (BFS) 12:30:05 95.00% Queue length: 153498
+[TICK] (BFS) 12:30:06 96.00% Queue length: 122793
+[TICK] (BFS) 12:30:07 97.00% Queue length: 92086
+[TICK] (BFS) 12:30:07 98.00% Queue length: 61380
+[TICK] (BFS) 12:30:08 99.00% Queue length: 30661
+[TICK] (BFS) Finished in 283.359315041s Queue length: 1
+3072441 1 1 2 1 1
+┌─────────┬─────────────┐
+│ (index) │   Values    │
+├─────────┼─────────────┤
+│  BFS-1  │    true     │
+│  time   │ '286.2151s' │
+└─────────┴─────────────┘
+3072441 1 1 3 1 1
+┌─────────┬───────────┐
+│ (index) │  Values   │
+├─────────┼───────────┤
+│  BFS-2  │   true    │
+│  time   │ '0.2972s' │
+└─────────┴───────────┘
+3072441 1 1 5 1 1
+┌─────────┬───────────┐
+│ (index) │  Values   │
+├─────────┼───────────┤
+│  BFS-3  │   true    │
+│  time   │ '0.2927s' │
+└─────────┴───────────┘
+✨  Done in 1126.89s.

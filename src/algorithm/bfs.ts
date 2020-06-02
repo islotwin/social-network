@@ -14,8 +14,6 @@ export class BreadthFirstSearch {
     if (!this.crawled) {
       this.crawl();
     }
-    const components = this.graph.getNodesArray().reduce((acc, { component }) => acc.add(component), new Set());
-    console.log(this.graph.getNodesArray().length, start, this.graph.getNode(start).component, target, this.graph.getNode(target).component, components.size);
     return this.graph.getNode(start).component === this.graph.getNode(target).component;
   }
 
@@ -41,6 +39,7 @@ export class BreadthFirstSearch {
         nodeId = queue.pop();
       } else {
         nodeId = toVisitIterator.next().value;
+        visited.add(nodeId);
         component = nodeId;
       }
       const node = this.graph.getNode(nodeId);
@@ -53,6 +52,8 @@ export class BreadthFirstSearch {
         }
       });
     }
+    const components = this.graph.getNodesArray().reduce((acc, { component }) => acc.add(component), new Set());
+    console.log(`[GRAPH STATS] Nodes: ${this.graph.getNodesArray().length}, Edges: ${this.graph.getEdgesCount()}, Components: ${components.size}`);
     this.crawled = true;
   }
 }

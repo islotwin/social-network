@@ -1,0 +1,14 @@
+yarn run v1.22.4
+$ npx tsc && node --max-old-space-size=14192 dist/app.js "./tests/other/orkut.txt"
+Running...
+
+<--- Last few GCs --->
+
+[27197:0x10411b000]   354504 ms: Scavenge 12948.2 (13059.2) -> 12947.4 (13058.5) MB, 13.4 / 0.0 ms  (average mu = 0.780, current mu = 0.826) allocation failure 
+[27197:0x10411b000]   354519 ms: Scavenge 12947.9 (13058.5) -> 12947.5 (13058.5) MB, 12.9 / 0.0 ms  (average mu = 0.780, current mu = 0.826) allocation failure 
+[27197:0x10411b000]   354532 ms: Scavenge 12948.3 (13058.5) -> 12947.9 (13058.5) MB, 11.6 / 0.0 ms  (average mu = 0.780, current mu = 0.826) allocation failure 
+
+
+<--- JS stacktrace --->
+
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

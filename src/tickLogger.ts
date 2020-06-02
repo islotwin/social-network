@@ -36,9 +36,9 @@ export const tickLogger = ({ total, tag, logCount = 1000 }: TickLoggerParams) =>
     } else {
       ticksUntilLog--;
     }
-    current++;
     if (current === total) {
       console.log(`[TICK] (${tag})`, `Finished in ${tick.tock()}`, comment);
     }
+    current++;
   };
 };

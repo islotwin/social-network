@@ -1,0 +1,133 @@
+yarn run v1.22.4
+$ npx tsc && node --max-old-space-size=8192 dist/app.js ./tests/generated/partition-4.txt
+Running...
+Creating graph...
+[PARSER] Finished in 37.2357s
+Created graph...
+[TICK] (BFS) 16:37:55 0.01% Queue length: 1
+[TICK] (BFS) 16:37:55 1.01% Queue length: 11622
+[TICK] (BFS) 16:37:55 2.02% Queue length: 12904
+[TICK] (BFS) 16:37:55 3.02% Queue length: 13959
+[TICK] (BFS) 16:37:55 4.03% Queue length: 14778
+[TICK] (BFS) 16:37:55 5.03% Queue length: 15392
+[TICK] (BFS) 16:37:55 6.04% Queue length: 15848
+[TICK] (BFS) 16:37:55 7.04% Queue length: 16236
+[TICK] (BFS) 16:37:55 8.04% Queue length: 16458
+[TICK] (BFS) 16:37:55 9.05% Queue length: 16608
+[TICK] (BFS) 16:37:55 10.05% Queue length: 16702
+[TICK] (BFS) 16:37:55 11.06% Queue length: 16766
+[TICK] (BFS) 16:37:55 12.06% Queue length: 16748
+[TICK] (BFS) 16:37:55 13.07% Queue length: 16686
+[TICK] (BFS) 16:37:55 14.07% Queue length: 16615
+[TICK] (BFS) 16:37:56 15.08% Queue length: 16530
+[TICK] (BFS) 16:37:56 16.09% Queue length: 16760
+[TICK] (BFS) 16:37:56 17.09% Queue length: 16566
+[TICK] (BFS) 16:37:56 18.09% Queue length: 16367
+[TICK] (BFS) 16:37:56 19.10% Queue length: 16170
+[TICK] (BFS) 16:37:56 20.11% Queue length: 15971
+[TICK] (BFS) 16:37:56 21.11% Queue length: 15771
+[TICK] (BFS) 16:37:56 22.12% Queue length: 15571
+[TICK] (BFS) 16:37:56 23.12% Queue length: 15371
+[TICK] (BFS) 16:37:56 24.13% Queue length: 15171
+[TICK] (BFS) 16:37:56 25.13% Queue length: 14972
+[TICK] (BFS) 16:37:56 26.14% Queue length: 14773
+[TICK] (BFS) 16:37:56 27.14% Queue length: 14572
+[TICK] (BFS) 16:37:56 28.14% Queue length: 14371
+[TICK] (BFS) 16:37:56 29.15% Queue length: 14170
+[TICK] (BFS) 16:37:56 30.15% Queue length: 13969
+[TICK] (BFS) 16:37:56 31.16% Queue length: 13768
+[TICK] (BFS) 16:37:56 32.16% Queue length: 13568
+[TICK] (BFS) 16:37:56 33.17% Queue length: 13367
+[TICK] (BFS) 16:37:56 34.17% Queue length: 13166
+[TICK] (BFS) 16:37:56 35.18% Queue length: 12965
+[TICK] (BFS) 16:37:56 36.19% Queue length: 12764
+[TICK] (BFS) 16:37:56 37.19% Queue length: 12563
+[TICK] (BFS) 16:37:56 38.20% Queue length: 12362
+[TICK] (BFS) 16:37:56 39.20% Queue length: 12161
+[TICK] (BFS) 16:37:57 40.20% Queue length: 11960
+[TICK] (BFS) 16:37:57 41.21% Queue length: 11759
+[TICK] (BFS) 16:37:57 42.22% Queue length: 11558
+[TICK] (BFS) 16:37:57 43.22% Queue length: 11357
+[TICK] (BFS) 16:37:57 44.22% Queue length: 11156
+[TICK] (BFS) 16:37:57 45.23% Queue length: 10955
+[TICK] (BFS) 16:37:57 46.23% Queue length: 10754
+[TICK] (BFS) 16:37:57 47.24% Queue length: 10553
+[TICK] (BFS) 16:37:57 48.24% Queue length: 10352
+[TICK] (BFS) 16:37:57 49.25% Queue length: 10151
+[TICK] (BFS) 16:37:57 50.26% Queue length: 9950
+[TICK] (BFS) 16:37:57 51.26% Queue length: 9749
+[TICK] (BFS) 16:37:57 52.26% Queue length: 9548
+[TICK] (BFS) 16:37:57 53.27% Queue length: 9347
+[TICK] (BFS) 16:37:57 54.27% Queue length: 9146
+[TICK] (BFS) 16:37:57 55.28% Queue length: 8945
+[TICK] (BFS) 16:37:57 56.28% Queue length: 8744
+[TICK] (BFS) 16:37:57 57.29% Queue length: 8543
+[TICK] (BFS) 16:37:57 58.29% Queue length: 8342
+[TICK] (BFS) 16:37:57 59.30% Queue length: 8141
+[TICK] (BFS) 16:37:57 60.30% Queue length: 7940
+[TICK] (BFS) 16:37:57 61.31% Queue length: 7739
+[TICK] (BFS) 16:37:57 62.31% Queue length: 7538
+[TICK] (BFS) 16:37:57 63.32% Queue length: 7337
+[TICK] (BFS) 16:37:57 64.33% Queue length: 7136
+[TICK] (BFS) 16:37:57 65.33% Queue length: 6935
+[TICK] (BFS) 16:37:57 66.33% Queue length: 6734
+[TICK] (BFS) 16:37:57 67.34% Queue length: 6533
+[TICK] (BFS) 16:37:57 68.34% Queue length: 6332
+[TICK] (BFS) 16:37:57 69.35% Queue length: 6131
+[TICK] (BFS) 16:37:57 70.36% Queue length: 5930
+[TICK] (BFS) 16:37:57 71.36% Queue length: 5729
+[TICK] (BFS) 16:37:57 72.36% Queue length: 5528
+[TICK] (BFS) 16:37:57 73.37% Queue length: 5327
+[TICK] (BFS) 16:37:57 74.38% Queue length: 5126
+[TICK] (BFS) 16:37:57 75.38% Queue length: 4925
+[TICK] (BFS) 16:37:58 76.39% Queue length: 4724
+[TICK] (BFS) 16:37:58 77.39% Queue length: 4523
+[TICK] (BFS) 16:37:58 78.40% Queue length: 4322
+[TICK] (BFS) 16:37:58 79.40% Queue length: 4121
+[TICK] (BFS) 16:37:58 80.41% Queue length: 3920
+[TICK] (BFS) 16:37:58 81.41% Queue length: 3719
+[TICK] (BFS) 16:37:58 82.42% Queue length: 3518
+[TICK] (BFS) 16:37:58 83.42% Queue length: 3317
+[TICK] (BFS) 16:37:58 84.42% Queue length: 3116
+[TICK] (BFS) 16:37:58 85.43% Queue length: 2915
+[TICK] (BFS) 16:37:58 86.44% Queue length: 2714
+[TICK] (BFS) 16:37:58 87.44% Queue length: 2513
+[TICK] (BFS) 16:37:58 88.44% Queue length: 2312
+[TICK] (BFS) 16:37:58 89.45% Queue length: 2111
+[TICK] (BFS) 16:37:58 90.45% Queue length: 1910
+[TICK] (BFS) 16:37:58 91.46% Queue length: 1709
+[TICK] (BFS) 16:37:58 92.47% Queue length: 1508
+[TICK] (BFS) 16:37:58 93.47% Queue length: 1307
+[TICK] (BFS) 16:37:58 94.47% Queue length: 1106
+[TICK] (BFS) 16:37:58 95.48% Queue length: 905
+[TICK] (BFS) 16:37:58 96.48% Queue length: 704
+[TICK] (BFS) 16:37:58 97.49% Queue length: 503
+[TICK] (BFS) 16:37:58 98.50% Queue length: 302
+[TICK] (BFS) 16:37:58 99.50% Queue length: 101
+[TICK] (BFS) Finished in 3.136418867s Queue length: 1
+[GRAPH STATS] Nodes: 20000, Edges: 22918034, Components: 1
+┌─────────┬───────────┐
+│ (index) │  Values   │
+├─────────┼───────────┤
+│  TEST   │   true    │
+│  time   │ '3.1437s' │
+└─────────┴───────────┘
+┌─────────┬───────────┐
+│ (index) │  Values   │
+├─────────┼───────────┤
+│ TEST-1  │   true    │
+│  time   │ '0.0000s' │
+└─────────┴───────────┘
+┌─────────┬───────────┐
+│ (index) │  Values   │
+├─────────┼───────────┤
+│ TEST-2  │   true    │
+│  time   │ '0.0000s' │
+└─────────┴───────────┘
+┌──────────┬───────────┐
+│ (index)  │  Values   │
+├──────────┼───────────┤
+│ DIJKSTRA │ '1,30,5'  │
+│   time   │ '1.4506s' │
+└──────────┴───────────┘
+✨  Done in 44.77s.

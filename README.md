@@ -23,6 +23,25 @@ from to
 (...)
 ```
 
+## generate graph
+Required
+- python [(download)](https://www.python.org/downloads/)
+- NetworkX package [(download)](https://networkx.github.io/documentation/stable/install.html)
+
+Run with default parameters
+```
+python ./generator.py [filename]
+```
+In order to run script with custom parameters, change line:
+```
+# nx.random_partition_graph(partitions, edges_in, edges_out)
+# partitions - array of numbers of nodes in groups
+# edges_in - probability of edges inside each group
+# edges_out - probability of edges between groups
+
+G = nx.random_partition_graph([10000, 4000, 6000], .3, 0.001)
+```
+
 ## example data sources
 * https://snap.stanford.edu/data/bigdata/communities/com-lj.ungraph.txt.gz
 * https://snap.stanford.edu/data/bigdata/communities/com-orkut.ungraph.txt.gz

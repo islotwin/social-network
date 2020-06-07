@@ -8,11 +8,12 @@
 #### install packages and run first test
 ```
 yarn
-yarn run test [path/to/file.txt]
+yarn build
+yarn start [path/to/file.txt]
 ```
 #### example
 ```
-yarn run test ./tests/test1.txt
+yarn start ./tests/test1.txt
 ```
 
 ## file structure (check tests/test{i}.txt):

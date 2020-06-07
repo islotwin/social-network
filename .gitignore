@@ -3,3 +3,6 @@ dist
 **/*.DS_Store
 tests/other
 env
+build
+yarn-error.log
+.vscode

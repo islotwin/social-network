@@ -16,7 +16,7 @@ export const time = async <T>(callback: () => (T | Promise<T>), name: string = '
   }
   return {
     result,
-    duration: [seconds, nanoSeconds]
+    duration: timeElapsed
   };
 };
 

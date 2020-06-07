@@ -34,6 +34,8 @@ const rl = readline.createInterface({
 
 console.log('Creating graph...');
 
+let testCounter = 0;
+
 timeFunction(() => Graph.parseLineByLine(rl), 'PARSER')
   .then((res) => {
     console.log('Created graph...');
@@ -48,21 +50,22 @@ timeFunction(() => Graph.parseLineByLine(rl), 'PARSER')
       const bfs = new BreadthFirstSearch(graph);
       const { from, to } = req.query;
       console.log('[NODES]', from, to);
-      const { result: areConnected, duration } = await timeFunction(() => bfs.areNodesConnected(from, to));
-
-      res.json({ from, to, areConnected, duration });
+      const { result, duration } = await timeFunction(() => bfs.areNodesConnected(from, to));
+      testCounter++;
+      res.json({ id: testCounter, from, to, result, duration });
     });
 
     app.get('/api/path', async (req: Request<{}, {}, {}, {from: string; to: string}>, res) => {
       const dijkstra = new Dijkstra(graph);
       const { from, to } = req.query;
       console.log('[NODES]', from, to);
-      const { result: path, duration } = await timeFunction(() => {
+      const { result, duration } = await timeFunction(() => {
         const path = dijkstra.findShortestPath(from, to);
-        return path?.join(',') || null;
+        return path;
+        // return path?.join(', ') || null;
       });
-
-      res.json({ from, to, path, duration });
+      testCounter++;
+      res.json({ id: testCounter, from, to, result, duration });
     });
   });
 
